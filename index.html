@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#10131f">
+<title>Ghostbite Index - Software Repository</title>
+
+<link rel="icon" type="image/png" href="images/icon.png">
+<link rel="stylesheet" href="style.css">
+
+
+
+<script type="module" src="Card-Render.js" defer></script>
+<script type="module" src="Main.js" defer></script>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="topbar" id="top">
+    <div class="topbar-inner">
+        <a href="#top" class="brand" aria-label="Ghostbyte Index home">
+            <div class="brand-icon pixel-font">魂</div>
+            <div>
+                <div class="brand-name">Ghostbyte <span>Index</span></div>
+                <div class="brand-subtitle">the software index</div>
+            </div>
+        </a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+            <span class="nav-status">
+                <span class="status-dot"></span>
+                SYSTEM ONLINE
+            </span>
+        </nav>
+    </div>
+</header>
+
+<main>
+<div class="container">
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+
+            <h1>
+                Free as in speech,
+                <span class="line-two"> not as in beer.</span>
+            </h1>
+
+            <p class="hero-copy">
+                Free and open source, stay sharp and keep software local.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#repository" class="pixel-button">
+                    <span>▶</span> BROWSE INDEX
+                </a>
+                <!--
+                <a href="#repository" class="pixel-button secondary">
+                    VIEW CATEGORIES
+                </a>
+                -->
+            </div>
+        </div>
+
+        <div class="art-stage" aria-label="Pixel art retro computer">
+            <div class="art-glow"></div>
+            <div class="pixel-floater floater-a">✦</div>
+            <div class="pixel-floater floater-b">◆</div>
+            <div class="pixel-floater floater-c">✧</div>
+
+            <div class="pixel-computer" aria-hidden="true">
+                <div class="monitor">
+                    <div class="screen">
+                        <div class="screen-symbol pixel-font">P_</div>
+                        <div class="screen-loading"></div>
+                        <div class="small green">READY TO EXPLORE</div>
+                    </div>
+                </div>
+                <div class="monitor-neck"></div>
+                <div class="monitor-base"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats-bar" aria-label="Repository overview">
+        <div class="stat">
+            <div class="stat-number" id="Tools_Count">000</div>
+            <div class="stat-label">Tools archived</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">OPEN</div>
+            <div class="stat-label">For everyone</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">FREE</div>
+            <div class="stat-label">To explore and download</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">Always available</div>
+        </div>
+    </section>
+
+
+    
+
+    <!-- SOFTWARE REPOSITORY -->
+    <section class="section" id="repository">
+        <div class="section-heading">
+            <div>
+                <h2 class="section-title">THE REPOSITORY</h2>
+                <div class="section-description">
+                    Browse the collection. Your next favorite might be here.
+                </div>
+            </div>
+        </div>
+
+        <div class="repository-toolbar filter-row" aria-label="Filter by category">
+
+            <button class="filter-btn" data-filter="All">EVERYTHING</button>
+            <button class="filter-btn" data-filter="Creative">CREATIVE</button>
+            <button class="filter-btn" data-filter="Utility">UTILITIES</button>
+            <button class="filter-btn" data-filter="Productivity">PRODUCTIVITY</button>
+            <button class="filter-btn" data-filter="Development">DEVELOPMENT</button>
+            <button class="filter-btn" data-filter="Security">SECURITY</button>
+        </div>
+
+        <div class="results-line">
+            <span>DIRECTORY: <strong>/software/all</strong></span>
+        </div>
+
+        <div class="software-grid" id="softwareGrid" onload="renderTools()">
+
+            <!-- CARDS ARE GENERATED IN HERE -->
+            
+            
+        </div>
+    </section>
+
+</div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container footer-inner">
+        <div>
+            <a href="#top" class="brand">
+                <div class="brand-icon pixel-font">魂</div>
+                <div>
+                    <div class="brand-name">Ghostbyte <span>Index</span></div>
+                    <div class="brand-subtitle">a tiny corner of the internet</div>
+                </div>
+            </a>
+            <p class="footer-copy">
+                <span>2026</span> Ghostbyte Index. Made with
+                <strong>♥</strong> and a few pixels.
+            </p>
+        </div>
+
+        <nav class="footer-links" aria-label="Footer navigation">
+            <a href="https://naivegoblin.github.io/" target="_blank">Check out my other work.</a>
+        </nav>
+    </div>
+</footer>
+</body>
+</html>
