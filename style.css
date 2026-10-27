@@ -549,7 +549,7 @@ a {
 .software-card {
     box-sizing: border-box;
     flex: 0 0 calc((100% - 54px) / 3.2);
-    min-width: 0;
+    min-width: 300px;
 
     display: flex;
     flex-direction: column;
