@@ -703,6 +703,162 @@ a {
     }
 }
 
+
+
+/* =========================================
+   GHOSTBYTE INDEX — PIXEL PAGINATION
+========================================= */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-top: 30px;
+    padding: 20px;
+
+    background: var(--panel);
+    border: 2px solid var(--border);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.pagination[hidden] {
+    display: none;
+}
+
+.page-btn {
+    min-width: 42px;
+    min-height: 42px;
+    padding: 8px 13px;
+
+    font-family: 'VT323', monospace;
+    font-size: 21px;
+    font-weight: normal;
+
+    color: var(--muted);
+    background: #171321;
+    border: 2px solid var(--border);
+
+    box-shadow: 3px 3px 0 #0c0a13;
+
+    transition:
+        color 0.15s ease,
+        background 0.15s ease,
+        border-color 0.15s ease,
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+/* Hover effect */
+.page-btn:hover:not(:disabled) {
+    color: var(--purple);
+    background: #2b2440;
+    border-color: var(--purple);
+
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0 #0c0a13;
+}
+
+/* Current page */
+.page-btn.active {
+    color: #171020;
+    background: var(--purple);
+    border-color: var(--purple);
+
+    font-weight: bold;
+
+    box-shadow: 3px 3px 0 #69518d;
+}
+
+/* Current page hover */
+.page-btn.active:hover:not(:disabled) {
+    color: #171020;
+    background: #d6c0ff;
+    border-color: #d6c0ff;
+}
+
+/* Previous and next buttons */
+.page-btn:first-child,
+.page-btn:last-child {
+    color: var(--cyan);
+    border-color: #354d69;
+    background: #171321;
+}
+
+.page-btn:first-child:hover:not(:disabled),
+.page-btn:last-child:hover:not(:disabled) {
+    color: #171020;
+    background: var(--cyan);
+    border-color: var(--cyan);
+}
+
+/* Disabled navigation */
+.page-btn:disabled {
+    color: #766b86;
+    background: #171321;
+    border-color: #393044;
+    box-shadow: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Keyboard accessibility */
+.page-btn:focus-visible {
+    outline: 2px dashed var(--yellow);
+    outline-offset: 4px;
+}
+
+/* =========================================
+   MOBILE PAGINATION
+========================================= */
+
+@media (max-width: 650px) {
+    .pagination {
+        gap: 8px;
+        padding: 14px 8px;
+    }
+
+    .page-btn {
+        min-width: 38px;
+        min-height: 40px;
+        padding: 7px 10px;
+        font-size: 19px;
+    }
+
+    .page-btn:first-child,
+    .page-btn:last-child {
+        padding: 7px 9px;
+    }
+}
+
+@media (max-width: 380px) {
+    .pagination {
+        gap: 6px;
+        padding: 12px 5px;
+    }
+
+    .page-btn {
+        min-width: 32px;
+        min-height: 36px;
+        padding: 5px 7px;
+        font-size: 17px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .page-btn {
+        transition: none;
+    }
+
+    .page-btn:hover:not(:disabled) {
+        transform: none;
+    }
+}
+    
+
 /* =========================================
    FOOTER
 ========================================= */
