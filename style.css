@@ -7,20 +7,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
 
 :root {
-    --bg: #100e19;
-    --panel: #1d192b;
-    --panel-light: #2b2440;
-    --border: #514365;
+    --bg: #12090d;
+    --panel: #211018;
+    --panel-light: #321722;
+    --border: #63303e;
 
-    --text: #f0e9fa;
-    --muted: #b7abc9;
+    --text: #f5e9ec;
+    --muted: #c5aab2;
 
-    --green: #c5f58a;
-    --cyan: #9bdcff;
-    --pink: #f5a4d1;
-    --yellow: #f5d68a;
-    --purple: #c6a7ff;
-    --red: #ff969e;
+    --green: #d5e99a;
+    --cyan: #e5a6b5;
+    --pink: #e87991;
+    --yellow: #edbd87;
+    --purple: #d94b67;
+    --red: #ff667d;
 }
 
 * {
